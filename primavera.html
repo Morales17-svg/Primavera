@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primavera</title>
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            background: url('flores.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: #FFD700; /* Dorado */
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Para hacer el texto más visible */
+        }
+        h2 {
+            color: #87CEEB; /* Azul cielo */
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+        p {
+            font-size: 1.5em;
+            color: #FFFFFF; /* Blanco para hacer contraste con el fondo */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            font-style: italic;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz 21 de septiembre, inicio de la primavera</h1>
+    <h2>¡Bienvenida, <span id="nombre"></span>!</h2>
+    <p>"La primavera es el momento en que las flores nos enseñan el arte de renacer."</p>
+
+    <script>
+        // Obtener el parámetro 'nombre' de la URL
+        const params = new URLSearchParams(window.location.search);
+        const nombre = params.get('nombre');
+        document.getElementById('nombre').textContent = nombre;
+    </script>
+</body>
+</html>
